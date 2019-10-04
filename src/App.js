@@ -30,7 +30,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 class App extends Component {
 
   alternateCaps = (myString) => {
-    console.log(myString);
+
+    let myStringArray = myString.split('');
+    // let alteredStringArray = myStringArray;
+
+    for (let i=1; i<myStringArray.length; i+=2) {
+      // myStringArray[i].toUpperCase();
+      // alteredStringArray[i] = myStringArray[i].toUpperCase();
+      // console.log(myStringArray[i]);
+      // console.log(alteredStringArray[i]);
+      myStringArray[i] = myStringArray[i].toUpperCase();
+    }
+
+    let newString = myStringArray.join('');
+    // console.log(myStringArray);
+    console.log(newString);
   }
 
   render() {
